@@ -1,0 +1,25 @@
+<div class="detail-section">
+
+    <div class="container-fluid">
+        
+
+
+        <img src="{{product.imageUrl}}" class="detail-img">
+        <h3>{{product.name}}</h3>
+        <div class="price">
+            {{product.unitPrice | currency: 'INR'}}
+        </div>
+        <!-- <a href="#" class="primary-btn">Buy Now</a>&nbsp;&nbsp; -->
+        <button (click)="addToCart()" class="btn btn-primary btn-sm">Add to Cart</button>
+        <hr>
+        <h4>Description</h4>
+        <p>{{product.description}}</p>
+    </div>
+    <div style="padding-left: 3%;" class="mt-5">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+            <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+          </svg>
+        <!-- <a routerLink="/category/2">Back to Products</a> -->
+        <button (click)="goBack()" class="btn btn-outline-info btn-sm">Back to Product List</button>
+    </div>
+</div>
